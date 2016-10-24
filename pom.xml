@@ -269,6 +269,19 @@
 		</plugins>
 	</build>
 
+	<distributionManagement>
+	    <repository>
+	        <id>central</id>
+	        <name>artifactory-0-releases</name>
+	        <url>http://artifactory-acme-dev-infra.apps.goern.example.com/artifactory/hello-local</url>
+	    </repository>
+	    <snapshotRepository>
+	        <id>snapshots</id>
+	        <name>artifactory-0-snapshots</name>
+	        <url>http://artifactory-acme-dev-infra.apps.goern.example.com/artifactory/hello-local</url>
+	    </snapshotRepository>
+	</distributionManagement>
+
 	<profiles>
 		<profile>
 			<!-- When built in OpenShift the 'openshift' profile will be used when
