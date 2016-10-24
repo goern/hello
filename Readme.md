@@ -15,6 +15,12 @@ Build and Deploy hello locally
 4. This will deploy `target/hello.war` to the running instance of the server.
 5. The application will be running at the following URL: <http://localhost:8080/hello/api/hello>
 
+Analyzing hello with SonarQube
+------------------------------
+
+Analyzing a Maven project consists of running a Maven goal: sonar:sonar in the directory where the pom.xml file is.
+To configure the SonarQube API URL change it's setting in pom.xml, search for <sonar.host.url/>
+
 Undeploy the Archive
 --------------------
 
@@ -31,5 +37,3 @@ Deploy the application in Openshift
 2. Execute
 
 		mvn clean package docker:build fabric8:json fabric8:apply -Popenshift
-
-
